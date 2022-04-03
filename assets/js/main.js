@@ -11,6 +11,10 @@ $(function(){
         }      
     });
 
+    $('#index-btn-crear').on('click', function(){
+        window.location.href = "formato.html"
+    })
+
     $('#Attach-AC-0121').on('click',function(e){
         $('#index-contenedor-modal-').show();
     });
