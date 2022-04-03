@@ -1,0 +1,225 @@
+*{
+	margin: 0;
+	font-family: 'Century Gothic','Arial', 'Times New Roman';
+	border-style: none;
+	box-sizing: border-box!important;
+}
+.formato-contenedor-principal{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+  padding: 20px;
+	/*background-color: blueviolet;*/
+}
+
+/*SECCION ENCABEZADO*/
+
+.formato-contenedor-encabezado{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.formato-logo{
+	height: 65px;
+}
+.formato-h1{
+	font-size: 22px;
+	color: rgb(29, 68, 84,0.8);
+}
+.formato-refrescar{
+	cursor: pointer;
+	width: 30px;
+}
+
+/*FIN SECCION ENCABEZADO*/
+
+/*SECCION ENCABEZADO FORMATO*/
+
+.formato-encabezado-formato{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.formato-encabezado-logo{
+	height: 100px;
+}
+.formato-encabezado-h1{
+	font-size: 20px;
+	color: rgba(58, 58, 58, 0.8);
+}
+.formato-encabezado-informacion-ac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    width: 10%;
+    font-weight: bold;
+    color: rgba(58, 58, 58, 0.8);;
+}
+
+/*FIN SECCION ENCABEZADO FORMATO*/
+
+/*FORMATO TITULO SECCIONES*/
+.formato-titulo-seccion{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #008080;
+    padding: 10px;
+    height: 25px;
+    width: 100% - 20px;
+}
+
+/*FIN FORMATO TITULO SECCIONES*/
+
+/*SECCION ETAPAS*/
+.formato-contenedor {
+    display: flex;  
+    flex-flow: row wrap;
+  }
+  
+  .formato-contenedor > * {
+    flex: 1 100%;
+    width: 100%;
+  }
+
+  label{
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  select{
+    font-size: 12px;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    margin: 10px;
+    width: calc(100% - 20px);
+    
+  }
+  
+  textarea{
+    font-size: 12px;
+    margin:10px;
+    width: calc(100% - 20px);
+    border: 1px rgb(128, 128, 128,0.3) solid;
+  }
+  table,th,tr,td, .aside-1, .informacion, .informacion-item{
+    border: 1px solid rgb(128, 128, 128,0.5);
+    border-collapse: collapse;
+  }
+
+  table.acciones{
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+  }
+
+  input[type="button"]{
+    color: black;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+  }
+
+  input[type="number"]{
+    color: black;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    width: calc(100% - 10px);
+  }
+
+  input[type="file"]{
+    color: black;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+  }
+
+  input[type="date"]{
+    color: black;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    width: calc(100% - 10px);
+  }
+
+  .main {
+    text-align: left;
+    background-color: white;
+  }
+  .aside-1 {
+    background-color: white;
+  }
+  
+  .informacion{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+  }
+  .informacion-item{
+    flex: 1 0 50%;
+    height: auto;
+  }
+  .formato-grid-icono{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  @media all and (min-width: 600px) {
+    .aside{
+        flex: 1 0 0; 
+    }
+    .informacion-item{
+      flex: 1 0 0; 
+  }
+  }
+  
+  @media all and (min-width: 800px) {
+    .main{ 
+        flex: 3 0px; 
+    }
+    .aside-1{
+        order: 1; 
+    } 
+    .main{ 
+        order: 2; 
+    }
+    .informacion{
+        order:3;
+    } 
+    
+  }
+
+  @media screen and (max-width: 500px){
+    .formato-h1{
+      display: none;
+    }
+
+    .formato-encabezado-logo{
+      display: none;
+
+    }
+
+    .formato-encabezado-h1{
+      display: none;
+    }
+
+    .formato-encabezado-informacion-ac{
+      flex: 1 100%;
+    }
+
+    .formato-titulo-seccion{
+      font-size: 12px;
+      height: auto;
+    }
+  }

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- DATA TABLE -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.dataTables.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.css"/>
+
+    <!--MIS ESTILOS -->
+	<link rel='stylesheet' href='assets/css/formato.css'/>
+</head>
+<body>
+    
+    <div class='formato-contenedor-encabezado' >
+        <img  class='formato-logo' src='assets/img/logo_horizontal.png' alt=''>
+        <h1 class='formato-h1'>Módulo de Acciones Correctivas</h1>
+        <img class ='formato-refrescar' src='assets/img/Refrescar1.png' alt='' id='formato-btn-refrescar'>
+    </div>
+
+    <div class='formato-contenedor-principal'>
+        <div class="formato-encabezado-formato">
+            <div>
+                <img class = "formato-encabezado-logo" src="assets\img\logo_cuadrado.png" alt="">
+            </div>
+            <div>
+                <h1 class="formato-encabezado-h1">Reporte acción correctiva</h1>
+            </div>
+            <div class = "formato-encabezado-informacion-ac">
+                <div>Folio: AC-0121</div>
+                <div>Re-Abierta: Si</div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="formato-contenedor">
+            <div class="formato-titulo-seccion">
+                D1 - Equipo de trabajo
+            </div>
+            <table class="main">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="formato-cbx-lider">Lider:</label>    
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-lider">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="formato-cbx-p1">Nombre:</label> 
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-p1">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="formato-cbx-p2">Nombre:</label> 
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-p2">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="formato-cbx-lider">Nombre:</label>    
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-lider">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="formato-cbx-p1">Nombre:</label> 
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-p1">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="formato-cbx-p2">Nombre:</label> 
+                        </td>
+                        <td>
+                            <select name="" id="formato-cbx-p2">
+                                <option value="">Persona</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="aside aside-1">
+                <label for="">
+                    Equipo responsable
+                </label>    
+            </div>
+        </div>
+
+        <br>
+
+        <div class="formato-contenedor">
+        <div class="formato-titulo-seccion">
+            D2 - Descripción del problema
+        </div>
+        <div class="aside aside-1">
+            <label for="">
+                ¿Cuál es el estado actual, condición?
+            </label>   
+        </div>
+        <div class="aside aside-1">
+            <textarea name="" id=""></textarea>
+        </div>
+        <div class="aside aside-1">
+            <div>
+                <label for="">
+                    Tipo de acción:
+                </label>
+                <select name="" id="">
+                    <option value="">Tipo acción</option>
+                </select>
+            </div>
+            <div>
+                <label for="">
+                    Costo Mala Calidad:
+                </label>
+                <input type="number">
+            </div>
+        </div>
+        <div class="informacion" style="width: 100%;">
+            <div class="informacion-item">
+                <label for="">Departamento:</label>
+                <Select>
+                    <option value="">
+                        Departamento
+                    </option>
+                </Select>
+            </div>
+            <div class="informacion-item">
+                <label for="">
+                    Fecha de emisión:
+                </label>
+                <input type="date">
+            </div>
+            <div class="informacion-item">
+                <label for="">
+                    Responsable:
+                </label>
+                <select name="" id="">
+                    <option value="">
+                        Responsable Departamento
+                    </option>
+                </select>
+            </div>
+            <div class="informacion-item">
+                <label for="">
+                    Auditor:
+                </label>
+                <select name="" id="">
+                    <option value="">
+                        Auditor
+                    </option>
+                </select>
+            </div>
+            <div class="informacion-item">
+                <label for="">
+                    Nombre de cliente:
+                </label>
+                <select name="" id="">
+                    <option value="">
+                        Nombre del cliente
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="informacion">
+            <input type="file">
+        </div>
+        </div>
+
+        <br>
+        
+        <div class="formato-contenedor">
+            <div class="formato-titulo-seccion">
+                D3 - Contramedidas Inmediatas
+            </div>
+            <table id="tabla-contramedidas" class="acciones" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th></th>
+                        <th>Acciones de contención</th>
+                        <th>Fecha</th>
+                        <th>Responsable</th>
+                        <th>Anexo</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="assets/img/pencil.png" alt="" class="formato-grid-icono"> </td>
+                        <td>Se realizaron cambios para recibir correos electrónicos vía Internet en lugar del cruce fronterizo</td>
+                        <td>2021-01-01</td>
+                        <td>Angel Cetz</td>
+                        <td><a href="">Evidencia.jpg</a> </td>
+                        <td><img src="assets/img/delete.png" alt="" class="formato-grid-icono"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="informacion">
+                <input type="button" value="Nueva acción">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="formato-contenedor">
+            <div class="formato-titulo-seccion">
+                D4 - Análisis de la causa raíz
+            </div>
+            <div class="informacion">
+                <label for="">Metodología utilizada</label>
+                <select name="" id="">
+                    <option value="">Ishikawa</option>
+                </select>
+                <input type="button" name="" id="" value="Ver metodología">
+            </div>
+            <div class="informacion">
+                <label for="">Causa raíz:</label>
+                <textarea name="" id=""></textarea>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="formato-contenedor">
+            <div class="formato-titulo-seccion">
+                D5 - Acciones correctivas definitivas / D6 - Implementación de acciones correctivas definitivas
+            </div>
+            <table id="tabla-definitivas" class="acciones" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th></th>
+                        <th>Acciones definitivas</th>
+                        <th>Fecha</th>
+                        <th>Responsable</th>
+                        <th>Anexo</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="assets/img/pencil.png" alt="" class="formato-grid-icono"> </td>
+                        <td>Se realizaron cambios para recibir correos electrónicos vía Internet en lugar del cruce fronterizo</td>
+                        <td>2021-01-01</td>
+                        <td>Angel Cetz</td>
+                        <td><a href="">Evidencia.jpg</a> </td>
+                        <td><img src="assets/img/delete.png" alt="" class="formato-grid-icono"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="informacion">
+                <input type="button" value="Nueva acción">
+            </div>
+
+        </div>
+
+    </div>
+
+    
+<!--JQUERY-->
+<script type='text/javascript' src='assets/js/jquery-3.6.0.min.js'></script>
+
+<!--DATA TABLE-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.js"></script>
+
+<!--MIS SCRIPTS-->
+<script type='text/javascript' src='assets/js/dataTable-init.js'></script>
+
+</body>
+</html>

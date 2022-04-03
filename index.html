@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'> 
+	
+	<title>Acciones Correctivas</title>
+
+	<!-- DATA TABLE -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.dataTables.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.css"/>
+
+	<!--MIS ESTILOS -->
+	<link rel='stylesheet' href='assets/css/index.css'/>
+</head>
+
+<body>
+
+	<div class='index-contenedor-principal'>
+
+		<div class='index-contenedor-encabezado' >
+
+			<img  class='index-logo' src='assets/img/logo_horizontal.png' alt=''>
+			<h1 class='index-h1'>Módulo de Acciones Correctivas</h1>
+			<div class='index-contenedor-botones-encabezado'>
+				<input type='button' id='index-btn-crear' value='Crear Acción Correctiva'>
+				<input type='button' id='index-btn-reportes' value = 'Reportes'>
+				<input type='button' id='index-btn-exportar' value = 'Exportar a Excel'>
+				<img class ='index-refrescar' src='assets/img/Refrescar1.png' alt='' id='index-btn-refrescar'>
+			</div>
+
+		</div>
+
+		<div class='index-contenedor-filtros'>
+
+			<div class='index-contenedor-cliente-departamento-estatus'>
+				<label for='index-cbx-cliente'>Cliente:</label>
+				<select id='index-cbx-cliente'>
+					<option></option>
+					<option>FUTURA INDUSTRIAL S.A. DE C.V.</option>
+					<option>SCHLAGE DE MEXICO SA DE CV</option>
+				</select>
+
+				<label for='index-cbx-departamento'>Departamento:</label>
+				<select id='index-cbx-departamento'>
+					<option></option>
+					<option>CALIDAD</option>
+					<option>REVISION</option>
+				</select>
+
+			</div>
+
+			<div class='index-contenedor-radios'>
+
+				<input type='radio' id='index-rbtn-abiertas' name='tipo' checked>
+				<label for='index-rbtn-abiertas'>Abiertas</label>
+				
+				<input type='radio' id='index-rbtn-cerradas' name='tipo'>
+				<label for='index-rbtn-cerradas'>Cerradas</label>
+				
+				<input type='radio' id='index-rbtn-todas' name='tipo'>
+				<label for='index-rbtn-todas'>Todas</label>	
+
+			</div>
+
+			<div class='index-contenedor-fecha'>
+
+				<label>De:</label>
+				<input type='date' id='index-dtp-inicio'>
+
+				<label>Hasta:</label>
+				<input type='date' id='index-dtp-fin'>
+
+				<img class ='index-buscar' src='assets/img/SearchIcon.png' id='index-btn-buscar'>
+
+			</div>
+
+		</div>
+
+		<div class='index-contenedor-grid'>
+			
+			<table id='index-grid-acciones' >
+
+				<thead>
+					<tr>
+						<th class='index-grid-icono'>#</th>
+						<th class='index-grid-icono'></th>
+						<th class='index-grid-icono'></th>
+						<th class='index-grid-icono'></th>
+						<th>Folio</th>
+						<th>Fecha</th>
+						<th>Fecha limite</th>
+						<th>Cliente</th>
+						<th>Tipo error</th>
+						<th>Tipo Accion</th>
+						<th>Costo Mala Calidad</th>
+						<th>Area</th>
+						<th>Responsable</th>
+						<th>Estatus</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class='index-grid-icono'>1</td>
+						<td><img class='index-grid-icono' src='assets/img/attach.png' alt='' id="Attach-AC-0121"></td>
+						<td><img class='index-grid-icono' src='assets/img/pencil.png' alt=''></td>
+						<td><img class='index-grid-icono' src='assets/img/format.png' alt=''></td>
+						<td>AC-0121</td>
+						<td>2021-08-01</td>
+						<td>2021-08-15</td>
+						<td>INDUSTRIAS HUNTER S. DE R.L. DE C.V.</td>
+						<td>PRODUCTO NO CONFORME</td>
+						<td>INTERNA</td>
+						<td>0.00</td>
+						<td>CALIDAD</td>
+						<td>ANA BARRON</td>
+						<td>ABIERTA</td>
+					</tr>
+
+					<tr>
+						<td class='index-grid-icono'>2</td>
+						<td><img class='index-grid-icono' src='assets/img/attach.png' alt='' id="Attach-AC-0221"></td>
+						<td><img class='index-grid-icono' src='assets/img/pencil.png' alt=''></td>
+						<td><img class='index-grid-icono' src='assets/img/format.png' alt=''></td>
+						<td>AC-0221</td>
+						<td>2021-08-15</td>
+						<td>2021-08-31</td>
+						<td>SOUTHWEST FABRICATORS S DE RL DE CV</td>
+						<td>PRODUCTO NO CONFORME</td>
+						<td>INTERNA</td>
+						<td>0.00</td>
+						<td>EXPORTACION</td>
+						<td>ADRIANA SALINAS</td>
+						<td>EN PROCESO</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<div class = 'index-grid-paginado'>
+			&nbsp;
+		</div>
+
+	</div>
+
+	<!--MODAL ANEXOS-->
+
+	<div id="index-contenedor-modal-" class="index-contenedor-modal">
+
+		<div class="index-modal">
+
+			<div class="index-modal-encabezado-pie">Anexos
+				<span id="index-btn-cerrar-modal" style="right: 0px; cursor: pointer;">
+					X
+				</span>
+			</div>
+
+			<div class="index-modal-contenedor">
+				
+				<div class="index-modal-contenedor-controles">
+
+					<div class="index-modal-informacion">
+						<label>Folio: AC-0121 </label>
+						<label>Departamento: Calidad </label>
+					</div>
+					
+					<div class="index-modal-contenedor-cbx-documento">
+						<label for="index-cbx-documento">Tipo Documento:</label>
+						<select id="index-cbx-documento">
+							<option value=""></option>
+							<option value="">PDF</option>
+							<option value="">Excel</option>
+							<option value="">Fotografia</option>
+						</select>
+					</div>	
+
+					<div class="index-modal-contenedor-adjuntar">
+						<input type="File">
+					</div>
+
+					<div class="index-modal-contenedor-subir">
+						<a id="index-btn-documento" href="">Guardar anexo</a>
+					</div>	
+					
+					<div class='index-contenedor-grid'>
+						<table id="index-grid-documentos" style="width: 100%;">
+							<thead>
+								<th>#</th>
+								<th>Documento</th>
+								<th>Fecha-Hora</th>
+								<th>Tipo</th>
+								<th>Etapa</th>
+								<th>Borrar</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td >1</td>
+									<td><a href="">Documento Test.pdf</a>
+									<td>2021-09-01 12:00 P.M.</td>
+									<td>PDF</td>
+									<td>D1</td>
+									<td ><img src="assets/img/delete.png" alt="" class="index-grid-icono"></td>	
+								</tr>
+								<tr>
+									<td >2</td>
+									<td><a href="">Documento Test.pdf</a>
+									<td>2021-09-01 12:00 P.M.</td>
+									<td>PDF</td>
+									<td>D1</td>
+									<td ><img src="assets/img/delete.png" alt="" class="index-grid-icono"></td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="index-modal-encabezado-pie"></div>
+
+		</div>
+	</div>
+
+	<!--JQUERY-->
+	<script type='text/javascript' src='assets/js/jquery-3.6.0.min.js'></script>
+
+	<!--DATA TABLE-->
+	<script type="text/javascript" src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.js"></script>
+
+	<!--MIS SCRIPTS-->
+	<script type='text/javascript' src='assets/js/dataTable-init.js'></script>
+	<script type='text/javascript' src='assets/js/index.js'></script>
+
+</body>
+</html>
